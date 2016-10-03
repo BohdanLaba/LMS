@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.ex.machina.hw.dao.PersonDaoService;
-import com.ex.machina.hw.entity.Person;
+import com.ex.machina.hw.dao.entity.Person;
 import com.ex.machina.hw.service.LMSService;
 
 @Component
@@ -14,10 +14,9 @@ public class LMSServiceImpl implements LMSService {
 
 	@Autowired
 	PersonDaoService personDao;
-	
-	
-	//TODO add Aspect logging & validation
-	
+
+	// TODO add Aspect logging & validation
+
 	public Person createPerson(Person person) {
 		return personDao.create(person);
 	}
@@ -28,6 +27,10 @@ public class LMSServiceImpl implements LMSService {
 
 	public List<Person> getSubordinates(Long mangerId) {
 		return personDao.getSubordinates(mangerId);
+	}
+
+	public Person updatePerson(Person person) {
+		return personDao.update(person);
 	}
 
 }

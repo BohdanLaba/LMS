@@ -2,13 +2,14 @@ package com.ex.machina.hw.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.ex.machina.hw.entity.Person;
+import com.ex.machina.hw.dao.entity.Person;
 import com.ex.machina.hw.service.LMSService;
 
 @Controller
@@ -22,12 +23,15 @@ public class PersonController {
 	 * show lecture participants, add people to lecture, remove from
 	 * 
 	 */
-	public Boolean addPerson(Person person) {
-		return null;
+	@RequestMapping(value = "/", method = RequestMethod.POST)
+	public Boolean addPerson(@RequestBody Person person) {
+		Person createPerson = lmsService.createPerson(person);
+		return createPerson != null;
 	}
 
+	@RequestMapping(value = "/", method = RequestMethod.PUT)
 	public Person updatePerson(Person person) {
-		return null;
+		return lmsService.updatePerson(person);
 	}
 
 	@RequestMapping(value = "/find", method = RequestMethod.GET)

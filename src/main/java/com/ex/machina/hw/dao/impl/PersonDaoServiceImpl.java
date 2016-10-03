@@ -9,7 +9,7 @@ import javax.persistence.Query;
 import org.springframework.stereotype.Repository;
 
 import com.ex.machina.hw.dao.PersonDaoService;
-import com.ex.machina.hw.entity.Person;
+import com.ex.machina.hw.dao.entity.Person;
 
 @Repository
 public class PersonDaoServiceImpl implements PersonDaoService {

@@ -3,7 +3,7 @@ package com.ex.machina.hw.dao.impl;
 import org.springframework.stereotype.Repository;
 
 import com.ex.machina.hw.dao.ProgramDaoService;
-import com.ex.machina.hw.entity.Phase;
+import com.ex.machina.hw.dao.entity.Phase;
 
 @Repository
 public class ProgramDaoServiceImpl implements ProgramDaoService {

@@ -3,7 +3,7 @@ package com.ex.machina.hw.dao.impl;
 import org.springframework.stereotype.Repository;
 
 import com.ex.machina.hw.dao.GroupDaoService;
-import com.ex.machina.hw.entity.Group;
+import com.ex.machina.hw.dao.entity.Group;
 
 @Repository
 public class GroupDaoServiceImpl implements GroupDaoService {

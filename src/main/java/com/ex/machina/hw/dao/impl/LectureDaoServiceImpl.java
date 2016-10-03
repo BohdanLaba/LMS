@@ -3,7 +3,7 @@ package com.ex.machina.hw.dao.impl;
 import org.springframework.stereotype.Repository;
 
 import com.ex.machina.hw.dao.LectureDaoService;
-import com.ex.machina.hw.entity.Lecture;
+import com.ex.machina.hw.dao.entity.Lecture;
 
 @Repository
 public class LectureDaoServiceImpl implements LectureDaoService {
